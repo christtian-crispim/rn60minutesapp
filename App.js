@@ -18,7 +18,7 @@ export default class App extends Component {
     try {
       const cities = await AsyncStorage.getItem(key)
       this.setState({ 
-        cities: JSON.parse(cities) 
+        cities: JSON.parse(cities) || []
       })
     } catch(e) {
       console.log('e: ', e)

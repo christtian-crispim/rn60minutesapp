@@ -29,12 +29,12 @@ export default class Cities extends React.Component {
             <ScrollView>
                 <View>
                     {
-                        (!this.props.screenProps.cities || !this.props.screenProps.cities.length) && (
+                        (!this.props.screenProps.cities.length) && (
                             <CenterMessage message='No cities' />
                         )
                     }
                     {
-                        (this.props.screenProps && this.props.screenProps.cities) &&
+                        (this.props.screenProps.cities) &&
                             this.props.screenProps.cities.map((city, index) => (
                                 <View>
                                     <TouchableWithoutFeedback 
